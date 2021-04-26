@@ -1,5 +1,3 @@
 package org.dedkot.chapter1.printableLibrary
 
-case class Cat(name: String,
-               age: Int,
-               color: String)
+case class Cat(name: String, age: Int, color: String)

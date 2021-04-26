@@ -42,10 +42,9 @@ object JsonWriterInstances {
       )
     }
 
-  implicit def optionWriter[A]
-  (implicit writer: JsonWriter[A]): JsonWriter[Option[A]] = {
+  implicit def optionWriter[A](implicit writer: JsonWriter[A]): JsonWriter[Option[A]] = {
     case Some(aValue) => writer.write(aValue)
-    case None => JsNull
+    case None         => JsNull
   }
 
 }
